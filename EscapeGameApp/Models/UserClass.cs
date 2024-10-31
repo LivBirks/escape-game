@@ -1,12 +1,11 @@
 using System;
-using System.IO;
 
-namespace EscapeGameApp.Models
+namespace EscapeGame
 {
     public class User
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string Username { get; private set; }
+        public string Password { get; private set; }
         public int NumberOfPlays { get; set; }
         public double AverageScore { get; set; }
 
@@ -18,7 +17,6 @@ namespace EscapeGameApp.Models
             AverageScore = 0.0;
         }
 
-        // You can overload methods here, for example:
         public void UpdateStats(int score)
         {
             NumberOfPlays++;
